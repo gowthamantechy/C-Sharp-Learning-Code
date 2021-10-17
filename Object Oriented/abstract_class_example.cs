@@ -1,5 +1,8 @@
 using System;
 
+// we can design two ways to solve the code maintanability, 
+// by creating a non abstract or base concrete class or abstract class
+
 
 /* abstract classes are used for mainly code maintainability..
 
@@ -10,6 +13,10 @@ abstract methods must be overrided in derived classes.
 if we want to affect the same behaviour in many classes,
 we can just change in the abstract class. it will affect in all classes.
 
+-----
+
+we could create an abstract class when we want to move the common functionality of one or more related class
+into base class and when , we don't want the base class to be instantiated..
 
 
 

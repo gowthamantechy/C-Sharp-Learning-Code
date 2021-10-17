@@ -13,6 +13,30 @@ interfaces can't be instantiated.
 
 we can't create an instance of an interface, 
 but an interface reference variable can point to a derived class object.
+---------Difference between Abstact class and interaces------------
+
+1. abstract class can have implementation for some of its members, but
+interface can't have implementation for any of its members
+
+2. interfaces can't have fields where as an abstract class can have fields
+
+3.An interface can inherit from another interface only and can't inherit from
+abstract class, where as an abstract class can inherit from another abstract class or
+another interface.
+
+4. A class can inherit from multiple interfaces at the same time ,
+where as a class can't inherit from multiple classes at the same time.
+
+5. an abstract classes can have modifiers whereas interface members can't have access 
+modifiers.
+
+--------------------------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -28,7 +52,7 @@ interface ICustomer1
 }
 
 
-interface ICustomer2
+interface ICustomer2:ICustomer1
 {
     void Print2();
 }
@@ -62,12 +86,12 @@ class Program
 
         //ICustomer2 cust=new ICustomer2();
 
-        //ICustomer2 cust=new Customer();
+        ICustomer2 cust=new Customer();
 
-        ICustomer1 cust=new Customer();
+        //ICustomer1 cust=new Customer();
 
         cust.Print1();
-        //cust.Print2();
+        cust.Print2();
         //cust.Print1();
 
         // Customer c=new Customer();
